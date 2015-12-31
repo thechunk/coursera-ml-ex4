@@ -62,7 +62,16 @@ Theta2_grad = zeros(size(Theta2));
 %               and Theta2_grad from Part 2.
 %
 
-
+X
+y
+for i = 1:m
+	xt = X(i, :)
+	yt = y(i)
+	hx = sigmoid(xt)
+	st = (-yt * log(hx)) - ((1 - yt) * log(1 - hx))
+	sf = sum(st / m)
+	J += sf
+endfor
 
 
 
